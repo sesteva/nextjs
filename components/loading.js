@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import SomeImage from "../assets/bars.svg";
+import SomeImage from "../public/bars.svg";
 
 export default function loading() {
   return (

@@ -17,3 +17,28 @@ Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packag
 ```bash
 npx create-next-app --example https://github.com/sesteva/nextjs
 ```
+
+## Rendering Options
+
+Once you execute `yarn build`, a summary of what has been generated will be produced as the example below.
+
+You will notice some pages have been generated statically as there is no usage of getStaticProps (fetching data at build time) or getInitialProps/getServerSideProps (fetching data at runtime server side)
+
+```
+Page                              Size     First Load JS
+┌ ○ /                             2.16 kB        75.7 kB
+├   /_app                         0 B            73.5 kB
+├ ○ /404                          3.18 kB        76.7 kB
+├ λ /api/hello                    0 B            73.5 kB
+└ ○ /top-headlines                3.72 kB        77.2 kB
+
+λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+●  (SSG)     automatically generated as static HTML + JSON (uses getStaticProps)
+   (ISR)     incremental static regeneration (uses revalidate in getStaticProps)
+
+```
+
+If you would like to deploy everything as a SPA, you will need to run `yarn export` instead. In this case a single rendering strategy is used, client-side rendering.
+
+

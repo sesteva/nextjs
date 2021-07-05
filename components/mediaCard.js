@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import Link from "next/link";
-import BrokenImage from "../assets/broken_image.png";
+import BrokenImage from "../public/broken_image.png";
 
 export default function mediaCard({
   image,
